@@ -17,7 +17,7 @@ from omni.isaac.lab_assets.franka import FRANKA_PANDA_CFG  # isort: skip
 
 
 @configclass
-class FrankaCubeLiftEnvCfg(LiftEnvCfg):
+class FrankaCubeEnv(LiftEnvCfg):
     def __post_init__(self):
         # post init of parent
         super().__post_init__()
@@ -77,7 +77,7 @@ class FrankaCubeLiftEnvCfg(LiftEnvCfg):
 
 
 @configclass
-class FrankaCubeLiftEnvCfg_PLAY(FrankaCubeLiftEnvCfg):
+class FrankaCubeEnv_PLAY(FrankaCubeEnv):
     def __post_init__(self):
         # post init of parent
         super().__post_init__()
