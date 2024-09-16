@@ -23,13 +23,13 @@ import torch
 
 from omni.isaac.lab.envs import ManagerBasedRLEnv
 
-from task2_3.config.franka.joint_pos_env_cfg import FrankaEnvCfg
+from task2_3.config.franka.joint_pos_env_cfg import FrankaCubeEnv
 
 
 def main():
     """Main function."""
     # create environment configuration
-    env_cfg = FrankaEnvCfg()
+    env_cfg = FrankaCubeEnv()
     env_cfg.scene.num_envs = args_cli.num_envs
     # setup RL environment
     env = ManagerBasedRLEnv(cfg=env_cfg)
