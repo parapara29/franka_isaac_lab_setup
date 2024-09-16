@@ -23,7 +23,7 @@ import torch
 
 from omni.isaac.lab.envs import ManagerBasedRLEnv
 
-from task2_3.franka_env_cfg import FrankaEnvCfg
+from task2_3.config.franka.joint_pos_env_cfg import FrankaEnvCfg
 
 
 def main():
