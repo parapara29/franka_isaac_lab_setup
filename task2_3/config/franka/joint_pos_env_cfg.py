@@ -6,8 +6,8 @@ from omni.isaac.lab.sim.spawners.from_files.from_files_cfg import UsdFileCfg
 from omni.isaac.lab.utils import configclass
 from omni.isaac.lab.utils.assets import ISAAC_NUCLEUS_DIR
 
-from omni.isaac.lab_tasks.manager_based.manipulation.lift import mdp
-from omni.isaac.lab_tasks.manager_based.manipulation.lift.lift_env_cfg import LiftEnvCfg
+from task2_3 import mdp
+from task2_3.franka_env_cfg import FrankaEnvCfg
 
 ##
 # Pre-defined configs
@@ -17,7 +17,7 @@ from omni.isaac.lab_assets.franka import FRANKA_PANDA_CFG  # isort: skip
 
 
 @configclass
-class FrankaCubeEnv(LiftEnvCfg):
+class FrankaCubeEnv(FrankaEnvCfg):
     def __post_init__(self):
         # post init of parent
         super().__post_init__()
