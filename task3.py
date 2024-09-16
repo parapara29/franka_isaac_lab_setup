@@ -111,7 +111,10 @@ def main():
             # pre-process actions
             actions = pre_process_actions(delta_pose, gripper_command)
             # apply actions
-            env.step(actions)
+            obs, rew, terminated, truncated, info = env.step(actions)
+
+            # print the distance between ee and cube
+            print("[Env 0]: Distance: ", obs["policy"][3][1].item())
 
     # close the simulator
     env.close()
